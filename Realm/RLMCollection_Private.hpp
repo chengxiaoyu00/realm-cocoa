@@ -76,3 +76,6 @@ RLMNotificationToken *RLMAddNotificationBlock(id objcCollection,
                                               void (^block)(id, RLMCollectionChange *, NSError *),
                                               bool suppressInitialChange=false);
 
+template<typename Collection>
+NSArray *RLMCollectionValueForKey(Collection& collection, NSString *key,
+                                  RLMRealm *realm, RLMClassInfo& info);
